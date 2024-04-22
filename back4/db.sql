@@ -18,3 +18,5 @@ CREATE TABLE application_language (
     FOREIGN KEY (application_id) REFERENCES Applications(id),   
     FOREIGN KEY (language_id) REFERENCES programming_language(id),     
     PRIMARY KEY (application_id, language_id) );
+
+ CREATE TABLE Users (     id INT AUTO_INCREMENT PRIMARY KEY,     FormId INT,     Login VARCHAR(255) NOT NULL,     Password VARCHAR(255) NOT NULL,     FOREIGN KEY (FormId) REFERENCES application(id) );
